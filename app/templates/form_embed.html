@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ form.name }} — OpenReach</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="embed-body">
+  <div class="embed-card">
+    <h2>{{ form.name }}</h2>
+    <form method="post" action="/f/{{ form.slug }}/submit" class="embed-form">
+      {% for f in fields %}
+        <label class="field">
+          <span class="field-label">{{ f.label }}{% if f.required %} <span class="req">*</span>{% endif %}</span>
+          {% if f.type == 'textarea' %}
+            <textarea name="{{ f.name }}" rows="4" {% if f.required %}required{% endif %}></textarea>
+          {% else %}
+            <input type="{{ f.type or 'text' }}" name="{{ f.name }}" {% if f.required %}required{% endif %}>
+          {% endif %}
+        </label>
+      {% endfor %}
+      <button type="submit" class="btn btn-primary btn-block">{{ form.submit_label }}</button>
+    </form>
+  </div>
+</body>
+</html>

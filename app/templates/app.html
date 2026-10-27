@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenReach — CRM &amp; Marketing Hub</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="/static/favicon.svg" alt="" class="brand-mark">
+        <span class="brand-name">OpenReach</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">Dashboard</button>
+        <div class="nav-group">CRM</div>
+        <button class="nav-item" data-view="contacts">Contacts</button>
+        <button class="nav-item" data-view="companies">Companies</button>
+        <button class="nav-item" data-view="deals">Deals Pipeline</button>
+        <div class="nav-group">Marketing</div>
+        <button class="nav-item" data-view="campaigns">Campaigns</button>
+        <button class="nav-item" data-view="sequences">Sequences</button>
+        <button class="nav-item" data-view="forms">Web Forms</button>
+        <button class="nav-item" data-view="landing">Landing Pages</button>
+        <button class="nav-item" data-view="workflows">Automation</button>
+        <div class="nav-group">Operations</div>
+        <button class="nav-item" data-view="tasks">Tasks</button>
+        <button class="nav-item" data-view="outbox">Email Outbox</button>
+      </nav>
+      <div class="sidebar-foot">v1.0 · self-hosted</div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <h1 id="view-title">Dashboard</h1>
+        <div class="topbar-actions" id="topbar-actions"></div>
+      </header>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

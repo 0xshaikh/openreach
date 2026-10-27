@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanks — {{ form.name }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="embed-body">
+  <div class="embed-card">
+    <h2>Thank you{{ (' ' ~ name) if name else '' }}!</h2>
+    <p>Your submission to <strong>{{ form.name }}</strong> was received. We'll be in touch.</p>
+  </div>
+</body>
+</html>
